@@ -1,0 +1,52 @@
+import { createBrowserRouter } from "react-router-dom";
+import Main from "../LayOut/Main";
+import DisplayError from "../Components/DisplayError";
+import Home from "../Components/Home";
+import Add from "../Components/Add";
+import Edit from "../Components/Edit";
+import Login from './../Components/Login';
+import Signup from './../Components/Signup';
+import BlogForm from './../Components/BlogForm';
+import Tests from './../Components/Tests';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <DisplayError></DisplayError>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/Add",
+        element: <Add></Add>,
+      },
+      {
+        path: "/Edit/:postID",
+        element: <Edit></Edit>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Signup></Signup>,
+      },
+      {
+        path: "/createblog",
+        element: <BlogForm></BlogForm>,
+      },
+      {
+        path: "/tests",
+        element: <Tests></Tests>,
+      },
+
+      
+    ],
+  },
+]);
+export default router;
