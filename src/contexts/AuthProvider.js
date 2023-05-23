@@ -7,6 +7,7 @@ export const AuthContext = createContext();
 const auth = getAuth(app)
 const googleProvider=new GoogleAuthProvider()
 const AuthProvider = ({children}) => {
+    const [allBlogs,setAllBlogs]=useState([])
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [allUsers,setAllUsers]=useState([])
@@ -39,6 +40,13 @@ const AuthProvider = ({children}) => {
         .then(data=>setAllUsers(data))
 
     },[allUsers])
+    
+    useEffect(()=>{
+        fetch("http://localhost:5000/allblogs")
+        .then(res=>res.json())
+        .then(data=>setAllBlogs(data))
+
+    },[allBlogs])
 
     useEffect( () =>{
         const unsubscribe = onAuthStateChanged(auth, currentUser =>{
@@ -56,7 +64,7 @@ const AuthProvider = ({children}) => {
         updateUser,
         logOut,
         user,
-        loading,googleSignIn,setUser,allUsers
+        loading,googleSignIn,setUser,allUsers,allBlogs
     }
     return (
         <AuthContext.Provider value={authInfo}>

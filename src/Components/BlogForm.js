@@ -5,8 +5,14 @@ import 'react-photo-view/dist/react-photo-view.css';
 import EditorToolbar, { modules, formats } from "./EditorToolbar";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import ReactQuill from 'react-quill';
+import { Quill } from 'react-quill';
+import { ImageActions } from '@xeger/quill-image-actions';
+import { ImageFormats } from '@xeger/quill-image-formats';
 import 'react-quill/dist/quill.snow.css';
 import { toast } from 'react-hot-toast';
+
+Quill.register('modules/imageActions', ImageActions);
+Quill.register('modules/imageFormats', ImageFormats);
 const BlogForm = () => {
     const [value, setValue] = useState('');
 
@@ -41,6 +47,8 @@ const BlogForm = () => {
     }
 
     const modules = {
+      imageActions: {},
+  imageFormats: {},
         toolbar: [
           [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
           [{size: []}], [{ 'color': [] }, { 'background': [] }], [{ 'align': [] }], 
@@ -57,14 +65,14 @@ const BlogForm = () => {
       }
       const formats = [
         'header', 'font', 'size',
-        'bold', 'italic',"align", 'underline', 'strike',  "color",
+        'bold', 'italic',"align",'float', 'underline', 'strike',  "color",
         "code-block", 'blockquote',
         'list', 'bullet', 'indent',
         'link', 'image', 'video'
       ]
 
     return (
-        <div  className='p-32 '>
+        <div  className='p-10 '>
              <h1 className='text-left  mb-5 text-lg font-semibold'>Write your blog: </h1>
 
              <form onSubmit={getValue} action="">
@@ -77,13 +85,7 @@ const BlogForm = () => {
         <button className='btn btn-primary mt-16' onSubmit={getValue}>Post</button>
              </form>
      
-       {/* <PhotoProvider>
-      <div className="foo">
-      <PhotoView  src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ETPUM3G6l9Pe3VTHbMbx_yfLk5KqZ_kU9w&usqp=CAU"}>
-            <p><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ETPUM3G6l9Pe3VTHbMbx_yfLk5KqZ_kU9w&usqp=CAU'/></p>
-          </PhotoView>
-      </div>
-    </PhotoProvider> */}
+      
         </div>
     );
 };

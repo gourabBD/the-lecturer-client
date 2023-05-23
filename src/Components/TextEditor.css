@@ -1,12 +1,15 @@
 h1 {
     font-size: 45px;
+    word-wrap: break-word;
     
   }
   h2{
     font-size: 30px;
+    word-wrap: break-word;
   }
-  img{
-  margin-left: 42%;
-    margin-top: 50px;
-   
+  iframe{
+    height: 400px;
+    padding: 10px;
   }
+  
+  
