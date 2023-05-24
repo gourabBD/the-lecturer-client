@@ -1,6 +1,6 @@
 import React from 'react';
 import  { useState } from 'react';
-import { Link} from "react-router-dom";
+import { Link,useLocation, useNavigate} from "react-router-dom";
 import 'react-photo-view/dist/react-photo-view.css';
 import EditorToolbar, { modules, formats } from "./EditorToolbar";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
@@ -15,10 +15,13 @@ Quill.register('modules/imageActions', ImageActions);
 Quill.register('modules/imageFormats', ImageFormats);
 const BlogForm = () => {
     const [value, setValue] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
 
+    const from = location.state?.from?.pathname || '/';
 
     const getValue=(event)=>{
-      
+      event.preventDefault()
       const form=event.target
       const blogs=value
       const blogDescription = { blogs };
@@ -36,7 +39,7 @@ const BlogForm = () => {
           if (data.acknowledged) {
            
             toast.success("Booking Confirmed!");
-            
+            navigate(from, { replace: true });
             
           } else {
             toast.error(data.message);
@@ -72,17 +75,17 @@ const BlogForm = () => {
       ]
 
     return (
-        <div  className='p-10 '>
+        <div  className='lg:p-10 md:p-10 sm:p-2 min-h-screen '>
              <h1 className='text-left  mb-5 text-lg font-semibold'>Write your blog: </h1>
 
              <form onSubmit={getValue} action="">
 
-        <div className='mb-16'>
+        <div className='lg:mb-16'>
 
-             <ReactQuill placeholder='Write something...' className='  overflow-y-visible  h-96' theme="snow" value={value} onChange={setValue} modules={modules} formats={formats} />
+             <ReactQuill placeholder='Write something...' className='  overflow-y-visible  lg:h-96' theme="snow" value={value} onChange={setValue} modules={modules} formats={formats} />
         </div>
             
-        <button className='btn btn-primary mt-16' onSubmit={getValue}>Post</button>
+        <button className='btn btn-primary mt-10' onSubmit={getValue}>Post</button>
              </form>
      
       

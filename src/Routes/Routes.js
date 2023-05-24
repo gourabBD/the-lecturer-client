@@ -8,6 +8,8 @@ import Login from './../Components/Login';
 import Signup from './../Components/Signup';
 import BlogForm from './../Components/BlogForm';
 import Tests from './../Components/Tests';
+import Loadings from "../Components/Loadings";
+
 
 
 const router = createBrowserRouter([
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element:<Loadings><Home></Home></Loadings> ,
       },
       {
         path: "/Add",
@@ -38,11 +40,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/createblog",
-        element: <BlogForm></BlogForm>,
+        element: <Loadings><BlogForm></BlogForm></Loadings>,
       },
       {
         path: "/tests",
-        element: <Tests></Tests>,
+        element: <Loadings><Tests></Tests></Loadings>,
+      },
+      {
+        path: `/allblogs/:id`,
+        element:<Loadings><Edit></Edit></Loadings> ,
+        loader:({params})=>fetch(`http://localhost:5000/allblogs/${params.id}`),
       },
 
       

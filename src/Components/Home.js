@@ -6,7 +6,7 @@ const Home = () => {
   const {allBlogs}=useContext(AuthContext)
   
   return (
-    <div className="lg:p-10 ">
+    <div className="lg:p-10 min-h-screen">
       {
         allBlogs?.map(blog=><Editpost key={blog?._id} blog={blog}> </Editpost>)
       }
