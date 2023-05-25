@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
+import useToken from '../hooks/useToken';
 
 
 // import useToken from './../../hooks/useToken';
@@ -13,13 +14,15 @@ const Login = () => {
     const {googleSignIn,setUser,loading}=useContext(AuthContext)
     const [loginError, setLoginError] = useState("");
     const [loginUserEmail,setLoginUserEmail]= useState('')
-    
+    const [token]=useToken(loginUserEmail)
     const location = useLocation();
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || '/';
     
-
+    if(token){
+        navigate(from, {replace: true});
+    }
     
     const handleLogin = data => {
         

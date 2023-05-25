@@ -4,13 +4,12 @@ import DisplayError from "../Components/DisplayError";
 import Home from "../Components/Home";
 import Add from "../Components/Add";
 import Edit from "../Components/Edit";
-import Login from './../Components/Login';
-import Signup from './../Components/Signup';
-import BlogForm from './../Components/BlogForm';
-import Tests from './../Components/Tests';
+import Login from "./../Components/Login";
+import Signup from "./../Components/Signup";
+import BlogForm from "./../Components/BlogForm";
+import Tests from "./../Components/Tests";
 import Loadings from "../Components/Loadings";
-
-
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +19,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element:<Loadings><Home></Home></Loadings> ,
+        element: (
+          <Loadings>
+            <Home></Home>
+          </Loadings>
+        ),
       },
       {
         path: "/Add",
@@ -40,19 +43,30 @@ const router = createBrowserRouter([
       },
       {
         path: "/createblog",
-        element: <Loadings><BlogForm></BlogForm></Loadings>,
+        element: (
+          <PrivateRoute>
+            <BlogForm></BlogForm>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/tests",
-        element: <Loadings><Tests></Tests></Loadings>,
+        element: (
+          <PrivateRoute>
+            <Tests></Tests>
+            </PrivateRoute>
+        ),
       },
       {
-        path: `/allblogs/:id`,
-        element:<Loadings><Edit></Edit></Loadings> ,
-        loader:({params})=>fetch(`http://localhost:5000/allblogs/${params.id}`),
+        path: `/allBlogs/:id`,
+        element: (
+          <PrivateRoute>
+            <Edit></Edit>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allBlogs/${params.id}`),
       },
-
-      
     ],
   },
 ]);
