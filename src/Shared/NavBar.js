@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
-
+import logo from "../android-chrome-192x192.png"
 const NavBar = () => {
-  const { user, logOut, allUsers, admiCode } = useContext(AuthContext);
+  const { user, logOut, allUsers } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut()
@@ -12,40 +12,22 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar  flex justify-between bg-base-100 lg:pr-5 lg:pl-5">
-      <div className="">
-        <Link to={"/"} className="btn btn-ghost normal-case text-xl">
+    <div data-theme="synthwave" className="navbar  flex justify-between bg-base-100 lg:pr-5 lg:pl-5">
+      <div className="flex gap-2">
+      <Link to={"/"}>
+
+      <img className=" h-36" src={logo} alt="" srcset="" />
+      </Link>
+        <Link to={"/"} className="btn btn-ghost normal-case text-xl lg:block md:block hidden">
+       
           The Lecturer
         </Link>
       </div>
 
       <div className=" ">
         <div className="gap-5 lg:flex md:flex hidden">
-          <Link
-            to={"/"}
-            className="font-medium btn btn-ghost normal-case text-lg"
-          >
-            Home
-          </Link>
-         {user?.uid ? <Link
-            to={"/tests"}
-            className="font-medium btn btn-ghost normal-case text-lg"
-          >
-            Tests
-          </Link>:<></>}
-          {allUsers?.map((users) =>
-            users?.email === user?.email && users?.role === "admin551717" ? (
-              <Link
-                key={users?._id}
-                to={"/createblog"}
-                className="font-medium btn btn-ghost normal-case text-lg"
-              >
-                Create a blog
-              </Link>
-            ) : (
-              <div key={Math.random()}></div>
-            )
-          )}
+         
+         
           {user?.uid ? (
             <div className="flex items-center gap-2 ">
               <p className=" font-semibold text-sm badge badge-primary  badge-outline  rounded-full">
@@ -99,13 +81,24 @@ const NavBar = () => {
             </Link>:<></>}
             {allUsers?.map((users) =>
               users?.email === user?.email && users?.role ==="admin551717" ? (
+                <div   key={users?._id} className="lg:flex md:flex">
+
                 <Link
-                  key={users?._id}
+                
                   to={"/createblog"}
                   className="font-medium btn btn-ghost normal-case text-md"
                 >
                   Create a blog
                 </Link>
+                 <Link
+              to={"/Createtests"}
+              className="font-medium btn btn-ghost normal-case text-md"
+            >
+              Create Tests
+            </Link>
+                </div>
+
+                
               ) : (
                 <div key={Math.random()}></div>
               )

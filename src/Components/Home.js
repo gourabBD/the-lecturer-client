@@ -3,6 +3,7 @@ import "./TextEditor.css";
 import { AuthContext } from "../contexts/AuthProvider";
 import Editpost from "./Editpost";
 import { useQuery } from "@tanstack/react-query";
+import FirstSection from "./FirstSection";
 const Home = () => {
   const { user,allBlogs } = useContext(AuthContext);
   //testing
@@ -10,12 +11,22 @@ const Home = () => {
 
   //testing
   return (
-    <div className="lg:p-10 min-h-screen overflow-x-hidden">
+    <div className="lg:p-10   lg:flex     md:grid sm:grid grid gap-2 h-fit">
+    <div data-theme="synthwave" className=" lg:w-1/3  relative  shadow-2xl  p-5  ">
+    <div className="sticky  top-0">
+
+  <FirstSection></FirstSection>
+    </div>
+   
+    </div>
+    <div className="overflow-y-auto overflow-x-hidden  scroll-">
+
       {allBlogs?.map((blog) => (
         <Editpost key={blog?._id} blog={blog}>
           {" "}
         </Editpost>
       ))}
+    </div>
     </div>
   );
 };

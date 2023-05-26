@@ -8,7 +8,7 @@ import Footer from '../Shared/Footer';
 
 const Main = () => {
     return (
-        <div >
+        <div className=''>
            <NavBar></NavBar>
           
            <Outlet></Outlet>
