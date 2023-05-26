@@ -8,18 +8,21 @@ const FirstSection = () => {
         
         
         <div data-theme="synthwave" className=' grid gap-5 '>
-             <Link
+             
+          {user?.uid ?<div>
+            <Link
             to={"/"}
             className="border w-full font-medium btn btn-ghost normal-case text-sm shadow-2xl flex text-left"
           >
             Home
           </Link>
-          {user?.uid ? <Link
+          <Link
             to={"/tests"}
             className="font-medium btn btn-ghost normal-case text-sm w-full  shadow-2xl flex text-left"
           >
             Tests
-          </Link>:<></>}
+          </Link>
+          </div> :<></>}
           {allUsers?.map((users) =>
             users?.email === user?.email && users?.role === "admin551717" ? (
               <div  key={users?._id} className="gap-5 grid">
@@ -32,7 +35,7 @@ const FirstSection = () => {
                 Create a blog
               </Link>
               <Link
-              to={"/Createtests"}
+              to={"/createTests"}
               className="font-medium btn btn-ghost normal-case  w-full shadow-2xl flex text-left text-sm"
             >
               Create tests

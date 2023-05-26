@@ -10,6 +10,7 @@ import BlogForm from "./../Components/BlogForm";
 import Tests from "./../Components/Tests";
 import Loadings from "../Components/Loadings";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import CreateTests from "../Components/CreateTests";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <BlogForm></BlogForm>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/createTests",
+        element: (
+          <PrivateRoute>
+            <CreateTests></CreateTests>
           </PrivateRoute>
         ),
       },
