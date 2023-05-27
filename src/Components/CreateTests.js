@@ -49,6 +49,7 @@ const CreateTests = () => {
                         {errors.question && <p className='text-red-600'>{errors.question?.message}</p>}
                     </div>
            </div>
+           
            <p className='text-blue-700 underline mt-5 text-lg font-semibold'>Put your options bellow</p>
            <div className='flex justify-center mt-10'>
           
