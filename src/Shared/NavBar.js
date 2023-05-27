@@ -16,7 +16,7 @@ const NavBar = () => {
       <div className="flex gap-2">
       <Link to={"/"}>
 
-      <img className=" h-36 rounded-full" src={logo} alt="" srcset="" />
+      <img className=" h-36 rounded-full" src={logo} alt="" />
       </Link>
         <Link to={"/"} className="btn btn-ghost normal-case text-xl lg:block md:block hidden">
        
