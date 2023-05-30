@@ -16,7 +16,7 @@ Quill.register("modules/imageFormats", ImageFormats);
 
 const BlogForm = () => {
   const [value, setValue] = useState("");
-
+  
   const location = useLocation();
   const navigate = useNavigate();
   const current = new Date();
@@ -25,16 +25,20 @@ const BlogForm = () => {
   }/${current.getFullYear()}`;
   let AmPm = "";
   const today = new Date(),
+  
     time =
       (today.getHours() % 12 || 12) +
       ":" +
       today.getMinutes() +
       ":" +
       today.getSeconds();
-  if (today.getHours() > 12) {
-    AmPm = "PM";
-  } else {
+     
+  if (today.getHours() < 12) {
     AmPm = "AM";
+    
+  } else {
+    AmPm = "PM";
+   
   }
   const from = location.state?.from?.pathname || "/";
 

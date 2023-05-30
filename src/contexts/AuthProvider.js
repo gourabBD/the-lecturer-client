@@ -20,6 +20,11 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [allUsers, setAllUsers] = useState([]);
+
+
+//array state for questions input
+ 
+
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -78,6 +83,8 @@ const AuthProvider = ({ children }) => {
     setUser,
     allUsers,
     allBlogs,
+    
+  
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
