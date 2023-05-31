@@ -8,7 +8,7 @@ const CreateTests = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  const topicName = "";
+  const [topicName,setTopicName]=useState("")
   let qArr = [];
   const [createTestValues, setCreateTestValues] = useState([]);
 
@@ -22,7 +22,7 @@ const CreateTests = () => {
   } = useForm();
 
   const handleTestQuestions = (data) => {
-    const topic = data?.topic;
+    
     const question = data?.question;
     const optionA = data?.optionA;
     const optionB = data?.optionB;
@@ -31,7 +31,7 @@ const CreateTests = () => {
     const correctAns = data?.correctAns;
 
     const allData = {
-      topic,
+     
       question,
       optionA,
       optionB,
@@ -46,19 +46,33 @@ const CreateTests = () => {
     qArr = [...createTestValues, allData];
     setCreateTestValues(qArr);
 
-    console.log(qArr);
+    // console.log(qArr);
 
     setCount([...qArr]);
 
     reset();
     toast.success("Question added successfully!!");
   };
+  console.log(topicName);
+
+  const handleChange=(e)=>{
+    e.preventDefault()
+    setTopicName(e.target.value)
+    console.log(topicName);
+    
+  }
+
 
   const handleQuestionSubmit = () => {
+    console.log(topicName);
+   
     const allTestInfo = {
+
+      qid:(Math.random() * ((1.5- 0.1) + 0.1)).toFixed(6),
+      topic:topicName,
       allTestQuestions: count,
     };
-    if (count) {
+    if (count.length>0) {
       fetch(`http://localhost:5000/createTests`, {
         method: "POST",
         headers: {
@@ -70,21 +84,38 @@ const CreateTests = () => {
         .then((data) => {
           if (data.acknowledged) {
             toast.success("Successfully published the test questions");
-          } else {
-            toast.error(data.message);
           }
+        
+           navigate("/tests");
         });
     } else {
       toast.error("Please write something in the input fields");
     }
-    navigate("/tests");
+   
   };
 
   return (
     <div className="min-h-screen mt-10 p-2">
+    <div className="flex justify-center mb-5">
+
+    <div>
+      <p className="text-md font-semibold mb-2 text-blue-700">
+              Enter the topic name once
+            </p>
+            <input
+            value={topicName}
+           onChange={handleChange}
+              type="text"
+             name="topic"
+              className="input input-bordered w-full max-w-xs disabled"
+              placeholder="Topic name "
+              required
+            />
+    </div>
+    </div>
       <form onSubmit={handleSubmit(handleTestQuestions)} className="">
         <div className="flex justify-center mb-5">
-          <div className="form-control w-full max-w-xs">
+          {/* <div className="form-control w-full max-w-xs">
             <p className="text-md font-semibold mb-2 text-blue-700">
               Enter the topic name once
             </p>
@@ -94,7 +125,7 @@ const CreateTests = () => {
               className="input input-bordered w-full max-w-xs disabled"
               placeholder="Topic name "
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex justify-center">
           <div className="form-control  w-full max-w-lg">
@@ -196,6 +227,7 @@ const CreateTests = () => {
             type="submit"
           />
         </div>
+      </form>
         <div>
           <button
             onClick={handleQuestionSubmit}
@@ -204,7 +236,6 @@ const CreateTests = () => {
             Publish
           </button>
         </div>
-      </form>
     </div>
   );
 };

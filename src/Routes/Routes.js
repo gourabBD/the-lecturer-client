@@ -11,6 +11,7 @@ import Tests from "./../Components/Tests";
 import Loadings from "../Components/Loadings";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import CreateTests from "../Components/CreateTests";
+import Quizes from "../Components/Quizes";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
             <CreateTests></CreateTests>
           </PrivateRoute>
         ),
+      },
+      {
+        path: `/createTests/:id`,
+        element: <PrivateRoute><Quizes></Quizes></PrivateRoute>,
+       
       },
       {
         path: "/tests",

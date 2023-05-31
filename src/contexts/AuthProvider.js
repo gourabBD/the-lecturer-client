@@ -63,6 +63,11 @@ const AuthProvider = ({ children }) => {
 
   },[allBlogs])
 
+
+  //all test questions fetching
+ 
+ 
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
