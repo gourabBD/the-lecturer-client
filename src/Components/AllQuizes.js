@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 
-const Quizes = () => {
+const AllQuizes = () => {
     const params = useParams();
     const [quiz,setQuiz]=useState([])
-    console.log(params?.id);
+    // console.log(params?.id);
     useEffect(()=>{
         fetch(`http://localhost:5000/createTests/${params?.id}`)
         .then(res=>res.json())
         .then(data=>setQuiz(data))
-    },[setQuiz])
+    },[quiz])
     
     const {allTestQuestions}=quiz
     const [topicName,setTopicNAme]=useState("")
     return (
         <div className='min-h-screen'>
-           {allTestQuestions?.map(tpc=>(tpc?.topic ? setTopicNAme(tpc?.topic):setTopicNAme("")))}
+          <p>{quiz?.topic}</p>
         </div>
     );
 };
 
-export default Quizes;
+export default AllQuizes;

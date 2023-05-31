@@ -11,7 +11,8 @@ import Tests from "./../Components/Tests";
 import Loadings from "../Components/Loadings";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import CreateTests from "../Components/CreateTests";
-import Quizes from "../Components/Quizes";
+
+import AllQuizes from "../Components/AllQuizes";
 
 const router = createBrowserRouter([
   {
@@ -61,8 +62,8 @@ const router = createBrowserRouter([
       },
       {
         path: `/createTests/:id`,
-        element: <PrivateRoute><Quizes></Quizes></PrivateRoute>,
-       
+        element: <AllQuizes></AllQuizes>,
+        
       },
       {
         path: "/tests",
