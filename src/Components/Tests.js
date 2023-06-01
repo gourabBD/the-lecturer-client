@@ -10,7 +10,7 @@ const Tests = () => {
         fetch('http://localhost:5000/createTests')
         .then(res=>res.json())
         .then(data=>setAllQuest(data))
-        },[setAllQuest])
+        },[allQuest])
    
     return (
         <div className='min-h-screen'>

@@ -45,25 +45,25 @@ const AllQuizes = () => {
             <div  className='lg:flex md:flex sm:grid justify-start items-center mt-5 border border-primary shadow-2xl p-5 overflow-x-scroll scrollbar-hide'>
 
     <input  onClick={(e)=>{if(e.target.value===singleQuest?.correctAns){setCorAns(singleQuest?.optionA) ;setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))
-    }  else{setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}}} type="radio" name="optionA" value={"optionA"} className="radio checked:bg-blue-500 flex justify-start"    />
+    }  else{setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}}} type="checkbox" name="optionA" value={"optionA"} className="radio checked:bg-blue-500   flex justify-start"    />
     <span className="ml-2 flex text-start text-base font-medium">{singleQuest?.optionA}</span> 
     </div>
 
   
     <div className='lg:flex md:flex sm:grid justify-start items-center mt-5 border border-primary shadow-2xl p-5 overflow-x-scroll scrollbar-hide'>
 
-    <input onClick={(e)=>{if(e.target.value===singleQuest?.correctAns){setCorAns(singleQuest?.optionB);setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}  else{setCorrectOpt(e.target.value); setQuestIndex(allTestQuestions.indexOf(singleQuest))}}} type="radio" name="optionB" value={"optionB"} className="radio checked:bg-blue-500 flex justify-start"   />
+    <input onClick={(e)=>{if(e.target.value===singleQuest?.correctAns){setCorAns(singleQuest?.optionB);setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}  else{setCorrectOpt(e.target.value); setQuestIndex(allTestQuestions.indexOf(singleQuest))}}} type="checkbox" name="optionB" value={"optionB"} className="radio checked:bg-blue-500 flex justify-start"   />
     <span className="ml-2 flex text-start text-base font-medium">{singleQuest?.optionB}</span> 
     </div>
     <div className=' justify-start items-center mt-5 border border-primary shadow-2xl p-5 lg:flex md:flex sm:grid overflow-x-scroll scrollbar-hide'>
 
-    <input onClick={(e)=>{if(e.target.value===singleQuest?.correctAns){setCorAns(singleQuest?.optionC);setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}  else{setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}}} type="radio" name="optionC" value={"optionC"} className="radio checked:bg-blue-500 flex justify-start"    />
+    <input onClick={(e)=>{if(e.target.value===singleQuest?.correctAns){setCorAns(singleQuest?.optionC);setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}  else{setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}}} type="checkbox" name="optionC" value={"optionC"} className="radio checked:bg-blue-500 flex justify-start"    />
     <span className="ml-2 flex text-start text-base font-medium">{singleQuest?.optionC}</span> 
     </div>
     <div className='lg:flex md:flex sm:grid justify-start items-center mt-5 border border-primary overflow-x-scroll scrollbar-hide shadow-2xl p-5'>
 
     <input onClick={(e)=>{if(e.target.value===singleQuest?.correctAns){setCorAns(singleQuest?.optionD);setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}
-    else{setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}}} type="radio" name="optionD" value={"optionD"} className="radio checked:bg-blue-500 flex justify-start"   />
+    else{setCorrectOpt(e.target.value);setQuestIndex(allTestQuestions.indexOf(singleQuest))}}} type="checkbox" name="optionD" value={"optionD"} className="radio checked:bg-blue-500 flex justify-start"   />
     <span className="ml-2 flex text-start text-base  font-medium">{singleQuest?.optionD}</span> 
     </div>
     {correctOpt && (questIndex===allTestQuestions.indexOf(singleQuest))&& <div>
@@ -74,9 +74,7 @@ const AllQuizes = () => {
      {
         (correctOpt !== singleQuest?.correctAns) && <div>
        <p className='text-red-600 text-start text-lg font-bold'>Wrong Answer!!!</p>
-       <div className='flex justify-start  items-center gap-2 overflow-scroll scrollbar-hide'>
-  <p className='text-lg font-bold '>Correct Ans:</p> <span className='text-green-600 text-lg font-bold'>{corAns}</span>
-     </div>
+       
      </div>
      }
     </div>}
