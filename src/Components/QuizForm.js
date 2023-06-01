@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate ,redirect, Route } from "react-router-dom";
 import AllQuizes from "./AllQuizes";
 import { toast } from "react-hot-toast";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const QuizForm = ({ allQQ, qid,id,quest }) => {
-  const navigate = useNavigate();
+  const {user,allUsers}=useContext(AuthContext)
 
   const handleDeleteTest = () => {
     const proceed = window.confirm(
@@ -27,12 +28,14 @@ const QuizForm = ({ allQQ, qid,id,quest }) => {
  
   return (
     <div className=" shadow-2xl p-2">
+    <p className="text-lg mt-10 font-bold ">Topic Name: </p>
+     <Link className="btn btn-primary text-lg " to={`/createTests/${id}`}>Topic:  {quest?.topic}</Link>
 
-     <Link className="btn btn-primary text-lg mt-10" to={`/createTests/${id}`}>Topic: {quest?.topic}</Link>
-     <div className="mt-2">
+   { allUsers?.map((users) =>
+            users?.email === user?.email && users?.role === "admin551717" ?  <div key={users?._id} className="mt-2">
 
       <button className="btn btn-error" onClick={handleDeleteTest}>Delete Quiz</button>
-     </div>
+     </div>: <div key={users?._id}></div>)}
     
     </div>
   );

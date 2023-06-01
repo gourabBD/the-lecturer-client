@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
-
+import { TypeAnimation } from "react-type-animation";
 const FirstSection = () => {
     const {user,allUsers}=useContext(AuthContext)
     return (
@@ -22,7 +22,16 @@ const FirstSection = () => {
           >
             Tests
           </Link>
-          </div> :<></>}
+          </div> :<div>
+          <TypeAnimation
+          sequence={["Login first to attend quizes!! ", 3000,"",2000,]}
+          className="text-lg text-center font-medium  mt-10  text-blue-700"
+          wrapper="span"
+          cursor={false}
+          repeat={Infinity}
+          style={{ fontSize: "1.4em", display: "inline-block" }}
+        />
+          </div>}
           {allUsers?.map((users) =>
             users?.email === user?.email && users?.role === "admin551717" ? (
               <div  key={users?._id} className="gap-5 grid">

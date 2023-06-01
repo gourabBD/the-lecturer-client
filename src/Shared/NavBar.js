@@ -25,11 +25,22 @@ const NavBar = () => {
       </div>
 
       <div className=" ">
+      
         <div className="gap-5 lg:flex md:flex hidden">
-         
+        { allUsers?.map((users) =>
+            users?.email === user?.email && users?.role === "admin551717" ?  <div key={users?._id} className="flex justify-start items-center pt-5">
+            <Link className="btn btn-ghost normal-case text-xl lg:block md:hidden hidden" to={"/createblog"}>Create a blog</Link>
+            <Link className="btn btn-ghost normal-case text-xl lg:block md:hidden hidden" to={"/createTests"}>Create tests</Link>
+            
+     
+     </div>: <div key={users?._id}></div>)}
          
           {user?.uid ? (
             <div className="flex items-center gap-2 ">
+            <div className="flex justify-start items-center pt-5">
+            <Link className="btn btn-ghost normal-case text-xl lg:block md:block hidden" to={"/tests"}>Tests</Link>
+            </div>
+
               <p className=" font-semibold text-sm badge badge-primary  badge-outline  rounded-full">
                 {user?.displayName}
               </p>
