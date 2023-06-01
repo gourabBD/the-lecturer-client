@@ -14,10 +14,10 @@ const AllQuizes = () => {
     
     const {allTestQuestions,qid}=quiz
    
-    const [optA,setOptA]=useState("")
+    
     const [correctOpt,setCorrectOpt]=useState("")
     const [questIndex,setQuestIndex]=useState("")
-    const [optD,setOptD]=useState("")
+    
     const [corAns,setCorAns]=useState("")
     
 

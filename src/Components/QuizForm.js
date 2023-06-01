@@ -28,7 +28,7 @@ const QuizForm = ({ allQQ, qid,id,quest }) => {
   return (
     <div className=" shadow-2xl p-2">
 
-     <Link className="btn btn-primary mt-10" to={`/createTests/${id}`}>{quest?.topic}</Link>
+     <Link className="btn btn-primary text-lg mt-10" to={`/createTests/${id}`}>Topic: {quest?.topic}</Link>
      <div className="mt-2">
 
       <button className="btn btn-error" onClick={handleDeleteTest}>Delete Quiz</button>
