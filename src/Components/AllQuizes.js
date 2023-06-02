@@ -21,7 +21,7 @@ const AllQuizes = () => {
   const [count, setCount] = useState(0);
   const [negCount, setNegCount] = useState(0);
 
-  let totalPoint = count - negCount;
+  let totalPoint = (count*100)/allTestQuestions?.length ;
 
   return (
     <div className="min-h-screen overflow-hidden ">
@@ -30,9 +30,9 @@ const AllQuizes = () => {
         <span className="underline text-green-500">Topic Name:</span>{" "}
         {quiz?.topic}
       </p>
-      {totalPoint <= allTestQuestions?.length ? (
+      {count <= allTestQuestions?.length ? (
         <p className="text-lg text-blue-600 font-bold">
-          Gained Number: {totalPoint}/{allTestQuestions?.length}
+          Mark: {totalPoint.toFixed(2)} %
         </p>
       ) : (
         <p className="text-lg text-red-600 font-bold">We found a cheater!!!</p>
@@ -196,6 +196,13 @@ const AllQuizes = () => {
           ))}
         </div>
       </div>
+      {count <= allTestQuestions?.length ? (
+        <p className="text-lg text-blue-600 font-bold">
+          Mark: {totalPoint.toFixed(2)} %
+        </p>
+      ) : (
+        <p className="text-lg text-red-600 font-bold">We found a cheater!!!</p>
+      )}
     </div>
   );
 };

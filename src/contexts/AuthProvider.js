@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [allUsers, setAllUsers] = useState([]);
   const [dashUsers, setDashUsers] = useState([]);
-
+  const [allQuizes, setAllQuizes] = useState([]);
   //array state for questions input
 
   const createUser = (email, password) => {
@@ -47,6 +47,11 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signOut(auth);
   };
+  useEffect(()=>{
+    fetch("https://the-lecturer-server.vercel.app/createtests")
+    .then(res=>res.json())
+    .then(data=>setAllQuizes(data))
+  },[allQuizes])
 
   useEffect(() => {
     fetch(`https://the-lecturer-server.vercel.app/users?email=${user?.email}`)
@@ -88,6 +93,7 @@ const AuthProvider = ({ children }) => {
     allUsers,
     allBlogs,
     dashUsers,
+    allQuizes
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

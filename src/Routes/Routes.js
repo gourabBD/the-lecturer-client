@@ -15,6 +15,7 @@ import CreateTests from "../Components/CreateTests";
 import AllQuizes from "../Components/AllQuizes";
 import MakeAdmin from "../Components/MakeAdmin";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +46,7 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Signup></Signup>,
       },
+      
       {
         path: "/createblog",
         element: (
