@@ -7,9 +7,9 @@ const FirstSection = () => {
     return (
         
         
-        <div data-theme="synthwave" className=' grid gap-5 '>
+        <div data-theme="synthwave" className=' grid  '>
              
-          {user?.uid ?<div>
+          {user?.uid ?<div className='grid gap-5 mb-5'>
             <Link
             to={"/"}
             className="border w-full font-medium btn btn-ghost normal-case text-sm shadow-2xl flex text-left"
