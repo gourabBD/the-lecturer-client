@@ -1,11 +1,12 @@
-## Specifications:
-1. Two user panel (Viewer, Admin)
+
+# Two user panel (Viewer, Admin)
+# Tech: React Js, React-quill, Tailwind CSS, Daisy UI, Firebase authentication, MongoDB, Node JS, Express JS, dotenv.
 
 # Viewer Panel:
 1. Viewer can read blogs.
 2. Playing quiz after login.
 
-#Admin Panel:
+# Admin Panel:
 1. Admin can post,edit,read and delete blogs.
 2. Admin can create quizes.
 3. Admin can delete and make an admin to a viewer.
