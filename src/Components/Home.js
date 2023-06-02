@@ -19,7 +19,7 @@ const Home = () => {
     </div>
    
     </div>
-    <div className="overflow-y-auto overflow-x-hidden  scroll-">
+    <div className="overflow-y-auto overflow-x-hidden  w-full">
 
       {allBlogs?.map((blog) => (
         <Editpost key={blog?._id} blog={blog}>

@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import CreateTests from "../Components/CreateTests";
 
 import AllQuizes from "../Components/AllQuizes";
+import MakeAdmin from "../Components/MakeAdmin";
 
 const router = createBrowserRouter([
   {
@@ -63,14 +64,13 @@ const router = createBrowserRouter([
       {
         path: `/createTests/:id`,
         element: <AllQuizes></AllQuizes>,
-        
       },
       {
         path: "/tests",
         element: (
           <PrivateRoute>
             <Tests></Tests>
-            </PrivateRoute>
+          </PrivateRoute>
         ),
       },
       {
@@ -81,7 +81,15 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allBlogs/${params.id}`),
+          fetch(`https://the-lecturer-server.vercel.app/allBlogs/${params.id}`),
+      },
+      {
+        path: `/makeAdmin2431`,
+        element: (
+          <PrivateRoute>
+            <MakeAdmin></MakeAdmin>
+          </PrivateRoute>
+        ),
       },
     ],
   },

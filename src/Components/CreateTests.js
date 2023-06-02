@@ -8,7 +8,7 @@ const CreateTests = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  const [topicName,setTopicName]=useState("")
+  const [topicName, setTopicName] = useState("");
   let qArr = [];
   const [createTestValues, setCreateTestValues] = useState([]);
 
@@ -22,7 +22,6 @@ const CreateTests = () => {
   } = useForm();
 
   const handleTestQuestions = (data) => {
-    
     const question = data?.question;
     const optionA = data?.optionA;
     const optionB = data?.optionB;
@@ -31,7 +30,6 @@ const CreateTests = () => {
     const correctAns = data?.correctAns;
 
     const allData = {
-     
       question,
       optionA,
       optionB,
@@ -55,25 +53,22 @@ const CreateTests = () => {
   };
   console.log(topicName);
 
-  const handleChange=(e)=>{
-    e.preventDefault()
-    setTopicName(e.target.value)
+  const handleChange = (e) => {
+    e.preventDefault();
+    setTopicName(e.target.value);
     console.log(topicName);
-    
-  }
-
+  };
 
   const handleQuestionSubmit = () => {
     console.log(topicName);
-   
-    const allTestInfo = {
 
-      qid:(Math.random() * ((1.5- 0.1) + 0.1)).toFixed(6),
-      topic:topicName,
+    const allTestInfo = {
+      qid: (Math.random() * (1.5 - 0.1 + 0.1)).toFixed(6),
+      topic: topicName,
       allTestQuestions: count,
     };
-    if (count.length>0) {
-      fetch(`http://localhost:5000/createTests`, {
+    if (count.length > 0) {
+      fetch(`https://the-lecturer-server.vercel.app/createTests`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -85,34 +80,32 @@ const CreateTests = () => {
           if (data.acknowledged) {
             toast.success("Successfully published the test questions");
           }
-        
-           navigate("/tests");
+
+          navigate("/tests");
         });
     } else {
       toast.error("Please write something in the input fields");
     }
-   
   };
 
   return (
     <div className="min-h-screen mt-10 p-2">
-    <div className="flex justify-center mb-5">
-
-    <div>
-      <p className="text-md font-semibold mb-2 text-blue-700">
-              Enter the topic name once
-            </p>
-            <input
+      <div className="flex justify-center mb-5">
+        <div>
+          <p className="text-md font-semibold mb-2 text-blue-700">
+            Enter the topic name once
+          </p>
+          <input
             value={topicName}
-           onChange={handleChange}
-              type="text"
-             name="topic"
-              className="input input-bordered w-full max-w-xs disabled"
-              placeholder="Topic name "
-              required
-            />
-    </div>
-    </div>
+            onChange={handleChange}
+            type="text"
+            name="topic"
+            className="input input-bordered w-full max-w-xs disabled"
+            placeholder="Topic name "
+            required
+          />
+        </div>
+      </div>
       <form onSubmit={handleSubmit(handleTestQuestions)} className="">
         <div className="flex justify-center mb-5">
           {/* <div className="form-control w-full max-w-xs">
@@ -228,14 +221,14 @@ const CreateTests = () => {
           />
         </div>
       </form>
-        <div>
-          <button
-            onClick={handleQuestionSubmit}
-            className="btn btn-info btn-outline mt-10"
-          >
-            Publish
-          </button>
-        </div>
+      <div>
+        <button
+          onClick={handleQuestionSubmit}
+          className="btn btn-info btn-outline mt-10"
+        >
+          Publish
+        </button>
+      </div>
     </div>
   );
 };

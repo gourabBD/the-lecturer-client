@@ -20,10 +20,9 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [allUsers, setAllUsers] = useState([]);
+  const [dashUsers, setDashUsers] = useState([]);
 
-
-//array state for questions input
- 
+  //array state for questions input
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -50,23 +49,23 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users?email=${user?.email}`)
+    fetch(`https://the-lecturer-server.vercel.app/users?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setAllUsers(data));
   }, [allUsers]);
+  useEffect(() => {
+    fetch(`https://the-lecturer-server.vercel.app/users`)
+      .then((res) => res.json())
+      .then((data) => setDashUsers(data));
+  }, [dashUsers]);
 
-  useEffect(()=>{
-
-      fetch("http://localhost:5000/allBlogs")
-      .then(res=>res.json())
-      .then(data=>setAllBlogs(data))
-
-  },[allBlogs])
-
+  useEffect(() => {
+    fetch("https://the-lecturer-server.vercel.app/allBlogs")
+      .then((res) => res.json())
+      .then((data) => setAllBlogs(data));
+  }, [allBlogs]);
 
   //all test questions fetching
- 
- 
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -88,8 +87,7 @@ const AuthProvider = ({ children }) => {
     setUser,
     allUsers,
     allBlogs,
-    
-  
+    dashUsers,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

@@ -49,6 +49,7 @@ const FirstSection = () => {
             >
               Create tests
             </Link>
+            <Link className='font-medium btn btn-ghost normal-case text-sm w-full  shadow-2xl flex text-left' to={"/makeAdmin2431"}>All users</Link>
               </div>
             ) : (
               <div key={Math.random()}></div>

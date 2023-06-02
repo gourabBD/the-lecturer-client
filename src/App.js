@@ -5,6 +5,7 @@ import router from './Routes/Routes';
 
 
 function App() {
+  
   return (
     <div className="App min-h-screen">
       <RouterProvider router={router}>

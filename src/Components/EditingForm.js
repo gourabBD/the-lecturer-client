@@ -23,7 +23,7 @@ const EditingForm = ({ prevblog, blogId }) => {
   //button function
   const handleEditedBlog = (event) => {
     event.preventDefault();
-    fetch(`http://localhost:5000/allBlogs/${blogId}`, {
+    fetch(`https://the-lecturer-server.vercel.app/allBlogs/${blogId}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -45,7 +45,7 @@ const EditingForm = ({ prevblog, blogId }) => {
   //   const blogs=value
   //   const blogDescription = { blogs };
 
-  //   fetch("http://localhost:5000/allBlogs", {
+  //   fetch("https://the-lecturer-server.vercel.app/allBlogs", {
   //     method: "POST",
   //     headers: {
   //       "content-type": "application/json",

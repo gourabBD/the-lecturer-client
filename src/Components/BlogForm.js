@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "react-photo-view/dist/react-photo-view.css";
@@ -10,13 +10,15 @@ import { ImageActions } from "@xeger/quill-image-actions";
 import { ImageFormats } from "@xeger/quill-image-formats";
 import "react-quill/dist/quill.snow.css";
 import { toast } from "react-hot-toast";
+import { AuthContext } from "../contexts/AuthProvider";
 
 Quill.register("modules/imageActions", ImageActions);
 Quill.register("modules/imageFormats", ImageFormats);
 
 const BlogForm = () => {
   const [value, setValue] = useState("");
-  
+  const {user}=useContext(AuthContext)
+
   const location = useLocation();
   const navigate = useNavigate();
   const current = new Date();
@@ -25,20 +27,17 @@ const BlogForm = () => {
   }/${current.getFullYear()}`;
   let AmPm = "";
   const today = new Date(),
-  
     time =
       (today.getHours() % 12 || 12) +
       ":" +
       today.getMinutes() +
       ":" +
       today.getSeconds();
-     
+
   if (today.getHours() < 12) {
     AmPm = "AM";
-    
   } else {
     AmPm = "PM";
-   
   }
   const from = location.state?.from?.pathname || "/";
 
@@ -46,9 +45,10 @@ const BlogForm = () => {
     event.preventDefault();
     const form = event.target;
     const blogs = value;
-    const blogDescription = { blogs, time, date, AmPm };
+    const author= user?.displayName
+    const blogDescription = { blogs, time, date, AmPm,author };
 
-    fetch("http://localhost:5000/allBlogs", {
+    fetch("https://the-lecturer-server.vercel.app/allBlogs", {
       method: "POST",
       headers: {
         "content-type": "application/json",

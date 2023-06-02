@@ -17,7 +17,7 @@ const Editpost = ({ blog }) => {
     );
 
     if (proceed) {
-      fetch(`http://localhost:5000/allBlogs/${blog?._id}`, {
+      fetch(`https://the-lecturer-server.vercel.app/allBlogs/${blog?._id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -37,18 +37,13 @@ const Editpost = ({ blog }) => {
           dangerouslySetInnerHTML={{ __html: blog?.blogs }}
         />
         <div className="lg:flex md:flex grid justify-between items-center ">
-          {allUsers?.map((users) =>
-            users?.role === "admin551717" ? (
-              <p key={users?._id} className="text-primary mt-10 text-left">
+        <p  className="text-primary mt-10 text-left">
                 Author:{" "}
                 <span className="font-semibold badge badge-success badge-outline">
-                  {users?.name}
+                  {blog?.author}
                 </span>{" "}
               </p>
-            ) : (
-              <span key={users?._id} />
-            )
-          )}
+          
           <div className="mt-10 gap-5 font-semibold flex justify-around">
             <p className="">
               Date: <span>{blog?.date}</span>{" "}
