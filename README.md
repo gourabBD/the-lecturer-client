@@ -19,7 +19,7 @@
 
 ## Admin Panel:
 
-#Home page of an admin
+# Home page of an admin
 
 ![admin1](https://github.com/gourabBD/the-lecturer-client/assets/67328861/d07d0c43-2aae-41c3-adc5-4809edd7cc2a)
 
@@ -41,7 +41,7 @@
 # All users route
 ![admin5](https://github.com/gourabBD/the-lecturer-client/assets/67328861/39336eee-c109-44c3-8813-4d27456485cd)
 
-
+---------------------------------------------------------------------------------------------------------------------------------------
 ## Viewer Panel:
 
  # viewer home page
