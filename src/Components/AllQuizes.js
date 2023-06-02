@@ -204,6 +204,7 @@ const AllQuizes = () => {
         <p className="text-lg text-red-600 font-bold">We found a cheater!!!</p>
       )}
     </div>
+    
   );
 };
 
