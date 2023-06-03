@@ -26,7 +26,8 @@
 
 # All Quiz test route
 
-![admin2](https://github.com/gourabBD/the-lecturer-client/assets/67328861/70b5de6b-6860-48da-a424-9ef817a8a3ae)
+![screencapture-the-lecturer-3d2e4-web-app-tests-2023-06-02-22_55_54](https://github.com/gourabBD/the-lecturer-client/assets/67328861/078b5a0a-62bd-46ca-8f04-31d296c8f85e)
+
 
 
 # Create blog form as an admin
@@ -50,12 +51,14 @@
 # All quiz topics as viewer
 
 
-![user2](https://github.com/gourabBD/the-lecturer-client/assets/67328861/19eadc6c-23c0-4921-8eda-d55ae2976de9)
+![screencapture-the-lecturer-3d2e4-web-app-tests-2023-06-02-22_58_15](https://github.com/gourabBD/the-lecturer-client/assets/67328861/d2531549-c3e1-48c0-88a6-e3ebdce7272d)
+
 
 
 # Viewer quiz test UI
 
-![user3](https://github.com/gourabBD/the-lecturer-client/assets/67328861/d7ca1007-a999-4850-a74f-39d8aff1bf31)
+![screencapture-the-lecturer-3d2e4-web-app-createTests-647741e8672e510b31e93ae2-2023-06-02-22_57_03](https://github.com/gourabBD/the-lecturer-client/assets/67328861/12352311-567a-4013-82b3-ce30bdb2da78)
+
 
  
  
