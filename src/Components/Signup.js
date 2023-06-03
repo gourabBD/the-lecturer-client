@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
 import useToken from "../hooks/useToken";
-
+import { FaGoogle } from 'react-icons/fa';
 const Signup = () => {
   const {
     register,
@@ -168,8 +168,9 @@ const Signup = () => {
         <div className="divider">OR</div>
         <button
           onClick={handleGoogleSignIn}
-          className="btn btn-outline  w-full"
+          className="btn btn-outline btn-info gap-2 w-full"
         >
+        <FaGoogle></FaGoogle>
           Sign Up with GOOGLE
         </button>
       </div>

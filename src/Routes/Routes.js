@@ -65,7 +65,9 @@ const router = createBrowserRouter([
       },
       {
         path: `/createTests/:id`,
-        element: <AllQuizes></AllQuizes>,
+        element:  <PrivateRoute>
+          <AllQuizes></AllQuizes>
+        </PrivateRoute>,
       },
       {
         path: "/tests",

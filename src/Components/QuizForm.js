@@ -26,16 +26,16 @@ const QuizForm = ({ allQQ, qid, id, quest }) => {
   };
 
   return (
-    <div className=" shadow-2xl p-2">
+    <div className=" shadow-2xl p-2 block ">
       <p className="text-lg mt-10 font-bold ">Topic Name: </p>
-      <Link className="btn btn-outline btn-primary text-lg " to={`/createTests/${id}`}>
-        Topic: {quest?.topic}
+      <Link className="  text-lg font-medium overflow-x-auto flex p-2 flex-wrap rounded-lg hover:font-bold hover:link-hover   bg-primary scrollbar-hide" to={`/createTests/${id}`}>
+        {quest?.topic}
       </Link>
 
       {allUsers?.map((users) =>
         users?.email === user?.email && users?.role === "admin551717" ? (
-          <div key={users?._id} className="mt-2">
-            <button className="btn btn-sm btn-outline btn-error" onClick={handleDeleteTest}>
+          <div key={users?._id} className="mt-2 ">
+            <button className="btn btn-sm btn-outline btn-error " onClick={handleDeleteTest}>
               Delete Quiz
             </button>
           </div>

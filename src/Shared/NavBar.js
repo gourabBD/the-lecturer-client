@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
 import logo from "../android-chrome-192x192.png"
+import { FiLogIn,FiLogOut } from 'react-icons/fi';
 const NavBar = () => {
   const { user, logOut, allUsers } = useContext(AuthContext);
 
@@ -44,15 +45,17 @@ const NavBar = () => {
               <p className=" font-semibold text-sm badge badge-primary  badge-outline  rounded-full">
                 {user?.displayName}
               </p>
-              <button className="btn btn-error" onClick={handleLogOut}>
+              <button className="btn btn-error gap-2" onClick={handleLogOut}>
+              <FiLogOut></FiLogOut>
                 Sign out
               </button>
             </div>
           ) : (
             <Link
               to={"/login"}
-              className="font-medium btn btn-ghost normal-case text-lg"
+              className="font-medium btn btn-ghost normal-case gap-2 text-lg"
             >
+            <FiLogIn></FiLogIn>
               Login
             </Link>
           )}
@@ -117,18 +120,20 @@ const NavBar = () => {
             {user?.uid ? (
               <div className="block  p-1">
                 {/* <Link to={"/createblog"} className="font-medium btn btn-ghost normal-case text-md">Create a blog</Link> */}
-                <p className=" font-semibold text-sm mb-2 badge badge-primary  badge-outline rounded-full">
+                <p className=" font-semibold text-sm mb-2 badge badge-primary mr-2 badge-outline rounded-full">
                   {user?.displayName}
                 </p>
-                <button className="btn btn-error" onClick={handleLogOut}>
+                <button className="btn btn-error gap-2" onClick={handleLogOut}>
+                <FiLogOut></FiLogOut>
                   Sign out
                 </button>
               </div>
             ) : (
               <Link
                 to={"/login"}
-                className="font-medium btn btn-ghost normal-case text-md"
+                className="font-medium btn btn-ghost normal-case gap-2 text-md"
               >
+               <FiLogIn></FiLogIn>
                 Login
               </Link>
             )}

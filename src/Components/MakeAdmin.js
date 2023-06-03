@@ -48,15 +48,15 @@ const MakeAdmin = () => {
   };
 
   return (
-    <div className="min-h-screen p-10 grid">
+    <div className="min-h-screen p-10 grid ">
       <div></div>
 
       {allUsers?.map((users) => (
         <div
-          className="  w-full mt-5 p-10 shadow-2xl font-semibold justify-evenly items-center lg:flex md:flex sm:grid grid gap-5 overflow-x-auto scrollbar-hide"
+          className="  w-full mt-5 p-10 shadow-2xl font-semibold justify-evenly items-center grid lg:grid-cols-3 grid-cols-1    gap-5 overflow-x-auto scrollbar-hide"
           key={users?._id}
         >
-          <div>
+          <div className="">
             <p>
               User Name: <span className="text-blue-600 "> {users?.name}</span>
             </p>
@@ -78,8 +78,9 @@ const MakeAdmin = () => {
               </button>
               <button
                 onClick={() => handleDeleteUser(users)}
-                className="btn btn-outline btn-sm btn-error"
+                className="btn btn-outline btn-sm btn-error "
               >
+            
                 Remove User
               </button>
             </div>

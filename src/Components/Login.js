@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 import useToken from '../hooks/useToken';
-
+import { FaGoogle } from 'react-icons/fa';
 
 // import useToken from './../../hooks/useToken';
 
@@ -83,6 +83,7 @@ const Login = () => {
                        
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
+                    
                     <input className='btn btn-primary w-full mt-2' value="Login" type="submit" />
                    <div>
                        {loginError && <p className='text-red-600'>{loginError}</p>}
@@ -90,7 +91,7 @@ const Login = () => {
                 </form>
                 <p>New to The Lecturer? <Link className='text-blue-600 underline' to="/register">Create new Account.</Link></p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleSignIn} className='btn btn-outline w-full'>Login WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline btn-info w-full gap-2'><FaGoogle></FaGoogle>Login WITH GOOGLE</button>
             </div>
         </div>
     );

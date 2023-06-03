@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
     "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.9.0",
     "react-photo-view": "^1.2.3",
     "react-quill": "^2.0.0",
     "react-quiz-component": "^0.5.1",

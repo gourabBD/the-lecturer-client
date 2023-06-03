@@ -25,14 +25,14 @@ const AllQuizes = () => {
 
   return (
     <div className="min-h-screen overflow-hidden ">
-      <p className="text-xl  font-semibold text-primary mt-10 ">
+      <p className="text-xl text-green-500 font-semibold  mt-10 ">
         {" "}
-        <span className="underline text-green-500">Topic Name:</span>{" "}
+        <span className="underline text-primary">Topic Name:</span>{" "}
         {quiz?.topic}
       </p>
       {count <= allTestQuestions?.length ? (
-        <p className="text-lg text-blue-600 font-bold">
-          Mark: {totalPoint.toFixed(2)} %
+        <p className="text-lg text-green-500 font-bold">
+          <span className="text-primary">Mark:</span> {totalPoint.toFixed(2)} %
         </p>
       ) : (
         <p className="text-lg text-red-600 font-bold">We found a cheater!!!</p>
@@ -197,8 +197,8 @@ const AllQuizes = () => {
         </div>
       </div>
       {count <= allTestQuestions?.length ? (
-        <p className="text-lg text-blue-600 font-bold">
-          Mark: {totalPoint.toFixed(2)} %
+        <p className="text-lg text-green-500 font-bold">
+          <span className="text-primary">Mark:</span> {totalPoint.toFixed(2)} %
         </p>
       ) : (
         <p className="text-lg text-red-600 font-bold">We found a cheater!!!</p>
