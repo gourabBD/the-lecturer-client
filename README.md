@@ -61,7 +61,8 @@
 
 # Viewer quiz test UI
 
-![screencapture-the-lecturer-3d2e4-web-app-createTests-647741e8672e510b31e93ae2-2023-06-02-22_57_03](https://github.com/gourabBD/the-lecturer-client/assets/67328861/12352311-567a-4013-82b3-ce30bdb2da78)
+![test2](https://github.com/gourabBD/the-lecturer-client/assets/67328861/488f330a-e726-409b-8a80-fce6ee1840d0)
+
 
 
  
