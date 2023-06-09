@@ -47,7 +47,8 @@
 ## Viewer Panel:
 
  # viewer home page
-![viewer tests](https://github.com/gourabBD/the-lecturer-client/assets/67328861/0d2d6319-5a26-4cc8-917d-73862cc44273)
+![viewer-home](https://github.com/gourabBD/the-lecturer-client/assets/67328861/a07795fd-c7b6-4e06-aaa5-118f95c1f2e0)
+
 
 
 # All quiz topics as viewer
