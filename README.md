@@ -21,12 +21,13 @@
 
 # Home page of an admin
 
-![admin1](https://github.com/gourabBD/the-lecturer-client/assets/67328861/d07d0c43-2aae-41c3-adc5-4809edd7cc2a)
+![admin-home](https://github.com/gourabBD/the-lecturer-client/assets/67328861/2c3b5164-2ffb-4d77-bdd6-3f2f0a78c10e)
 
 
 # All Quiz test route
 
-![screencapture-the-lecturer-3d2e4-web-app-tests-2023-06-02-22_55_54](https://github.com/gourabBD/the-lecturer-client/assets/67328861/078b5a0a-62bd-46ca-8f04-31d296c8f85e)
+
+![admin-tests](https://github.com/gourabBD/the-lecturer-client/assets/67328861/07f2b59d-d0d3-4b6e-bb01-633d0aa0f082)
 
 
 
@@ -46,12 +47,14 @@
 ## Viewer Panel:
 
  # viewer home page
- ![user1](https://github.com/gourabBD/the-lecturer-client/assets/67328861/5a083f3d-d77d-4f91-8581-30fa17b02e4c)
+![viewer tests](https://github.com/gourabBD/the-lecturer-client/assets/67328861/0d2d6319-5a26-4cc8-917d-73862cc44273)
+
 
 # All quiz topics as viewer
 
 
-![screencapture-the-lecturer-3d2e4-web-app-tests-2023-06-02-22_58_15](https://github.com/gourabBD/the-lecturer-client/assets/67328861/d2531549-c3e1-48c0-88a6-e3ebdce7272d)
+
+![viewer tests](https://github.com/gourabBD/the-lecturer-client/assets/67328861/57a5fe8b-8762-4216-bab7-2088ebe594c3)
 
 
 
