@@ -28,7 +28,7 @@ const QuizForm = ({ allQQ, qid, id, quest }) => {
   return (
     <div className=" shadow-2xl p-2 block ">
       <p className="text-lg mt-10 font-bold ">Topic Name: </p>
-      <Link className="  text-lg font-medium overflow-x-auto flex p-2 flex-wrap rounded-lg hover:font-bold hover:link-hover   bg-primary scrollbar-hide" to={`/createTests/${id}`}>
+      <Link className="  text-lg font-medium overflow-x-auto flex p-2 flex-wrap  rounded-lg hover:font-bold hover:link-hover   bg-blue-500 " to={`/createTests/${id}`}>
         {quest?.topic}
       </Link>
 

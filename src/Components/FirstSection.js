@@ -7,7 +7,7 @@ const FirstSection = () => {
     return (
         
         
-        <div data-theme="synthwave" className=' grid  '>
+        <div  className=' grid  bg-blue-500'>
              
           {user?.uid ?<div className='grid gap-5 mb-5'>
             <Link
@@ -25,7 +25,7 @@ const FirstSection = () => {
           </div> :<div>
           <TypeAnimation
           sequence={["Login first to attend quizes!! ", 3000,"",2000,]}
-          className="text-lg text-center font-medium  mt-10  text-blue-700"
+          className="text-lg text-center font-medium  mt-10  text-black"
           wrapper="span"
           cursor={false}
           repeat={Infinity}

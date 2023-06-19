@@ -13,13 +13,13 @@ const NavBar = () => {
   };
 
   return (
-    <div data-theme="synthwave" className="navbar  flex justify-between bg-base-100 lg:pr-5 lg:pl-5">
+    <div className="navbar  flex justify-between bg-base-100  lg:pr-5 lg:pl-5 bg-blue-500">
       <div className="flex gap-2">
       <Link to={"/"}>
 
-      <img className=" h-36 rounded-full" src={logo} alt="" />
+      <img className=" h-32 rounded-full" src={logo} alt="" />
       </Link>
-        <Link to={"/"} className="btn btn-ghost normal-case text-xl lg:block md:block hidden">
+        <Link to={"/"} className="btn btn-ghost normal-case text-xl lg:flex md:flex hidden  align-middle">
        
           The Lecturer
         </Link>
@@ -27,22 +27,22 @@ const NavBar = () => {
 
       <div className=" ">
       
-        <div className="gap-5 lg:flex md:flex hidden">
+        <div className=" lg:flex lg:items-center md:flex hidden">
         { allUsers?.map((users) =>
-            users?.email === user?.email && users?.role === "admin551717" ?  <div key={users?._id} className="flex justify-start items-center pt-5">
-            <Link className="btn btn-ghost normal-case text-xl lg:block md:hidden hidden" to={"/createblog"}>Create a blog</Link>
-            <Link className="btn btn-ghost normal-case text-xl lg:block md:hidden hidden" to={"/createTests"}>Create tests</Link>
+            users?.email === user?.email && users?.role === "admin551717" ?  <div key={users?._id} className="flex justify-start items-center ">
+            <Link className="btn btn-ghost normal-case text-xl lg:flex md:hidden hidden" to={"/createblog"}>Create a blog</Link>
+            <Link className="btn btn-ghost normal-case text-xl lg:flex md:hidden hidden" to={"/createTests"}>Create tests</Link>
             
      
      </div>: <div key={users?._id}></div>)}
          
           {user?.uid ? (
             <div className="flex items-center gap-2 ">
-            <div className="flex justify-start items-center pt-5">
-            <Link className="btn btn-ghost normal-case text-xl lg:block md:block hidden" to={"/tests"}>Tests</Link>
+            <div className="flex justify-start items-center ">
+            <Link className="btn btn-ghost normal-case text-xl lg:flex md:hidden hidden" to={"/tests"}>Tests</Link>
             </div>
 
-              <p className=" font-semibold text-sm badge badge-primary  badge-outline  rounded-full">
+              <p className=" font-semibold text-black text-sm  border border-primary  rounded p-2">
                 {user?.displayName}
               </p>
               <button className="btn btn-error gap-2" onClick={handleLogOut}>
@@ -120,7 +120,7 @@ const NavBar = () => {
             {user?.uid ? (
               <div className="block  p-1">
                 {/* <Link to={"/createblog"} className="font-medium btn btn-ghost normal-case text-md">Create a blog</Link> */}
-                <p className=" font-semibold text-sm mb-2 badge badge-primary mr-2 badge-outline rounded-full">
+                <p className=" font-semibold text-sm mb-2 border border-primary  rounded p-2 mr-2 text-black ">
                   {user?.displayName}
                 </p>
                 <button className="btn btn-error gap-2" onClick={handleLogOut}>

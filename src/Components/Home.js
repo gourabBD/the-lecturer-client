@@ -12,7 +12,7 @@ const Home = () => {
   //testing
   return (
     <div className="lg:p-10   lg:flex     md:grid sm:grid grid gap-2 h-fit">
-    <div data-theme="synthwave" className=" lg:w-1/3 mt-10 relative  shadow-2xl  p-5  ">
+    <div  className=" lg:w-1/3 mt-10 relative  shadow-2xl  p-5 bg-blue-500 ">
     <div className="sticky  top-0">
 
   <FirstSection></FirstSection>
