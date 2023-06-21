@@ -49,8 +49,9 @@
 
 
 # All users route
+![all users route](https://github.com/gourabBD/the-lecturer-client/assets/67328861/10e0587f-feb3-42c1-ada1-a96cdba6243d)
 
-![all users](https://github.com/gourabBD/the-lecturer-client/assets/67328861/11d8a12c-88c7-450b-b4a4-d3b17671531d)
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 ## Viewer Panel:
