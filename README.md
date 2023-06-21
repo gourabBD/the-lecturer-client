@@ -13,7 +13,7 @@
 
 
 # Live site link: https://the-lecturer-3d2e4.web.app/
-  Server side Github Link: https://github.com/gourabBD/the-lecturer-server
+#  Server side Github Link: https://github.com/gourabBD/the-lecturer-server
 
 ## Home page without login:
 
