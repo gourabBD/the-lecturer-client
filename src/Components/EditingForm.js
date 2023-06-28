@@ -70,10 +70,10 @@ const EditingForm = ({ prevblog, blogId }) => {
     imageActions: {},
     imageFormats: {},
     toolbar: [
-      [{ header: "1" }, { header: "2" }, { font: [] }],
-      [{ size: [] }],
+      [{ header: "1" }, { header: "2" }],
+     
       [{ color: [] }, { background: [] }],
-      [{ align: [] }],
+      
       ["bold", "italic", "underline", "strike", "blockquote"],
       [
         { list: "ordered" },
@@ -91,11 +91,10 @@ const EditingForm = ({ prevblog, blogId }) => {
   };
   const formats = [
     "header",
-    "font",
-    "size",
+    
     "bold",
     "italic",
-    "align",
+    
     "float",
     "underline",
     "strike",
@@ -118,6 +117,7 @@ const EditingForm = ({ prevblog, blogId }) => {
       <form className="" onSubmit={handleEditedBlog}>
         <div className="lg:mb-16">
           <ReactQuill
+          
             placeholder="Write something..."
             className="  overflow-y-visible  lg:h-96 "
             theme="snow"
@@ -127,10 +127,13 @@ const EditingForm = ({ prevblog, blogId }) => {
             formats={formats}
           />
         </div>
+        <div className="flex justify-center">
 
         <button className="btn btn-primary  mt-16" onSubmit={handleEditedBlog}>
           Post
         </button>
+        </div>
+
       </form>
     </div>
   );

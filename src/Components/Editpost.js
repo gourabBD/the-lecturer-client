@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
 import { toast } from "react-hot-toast";
+import 'react-quill/dist/quill.snow.css';
 
 const Editpost = ({ blog }) => {
   const { allUsers, user } = useContext(AuthContext);
@@ -10,7 +11,7 @@ const Editpost = ({ blog }) => {
   //testing
 
   //testing
-
+ 
   const handleDeleteBlog = () => {
     const proceed = window.confirm(
       "Are you sure, you want to delete this blog?"
@@ -32,7 +33,8 @@ const Editpost = ({ blog }) => {
     <div className=" border-4 border-blue-100 mt-10 shadow-xl">
       <div className="p-5">
         <div
-          className="card mt-10  bg-base-100 "
+        
+          className="card mt-10 text-left   bg-base-100 "
           key={blog?._id}
           dangerouslySetInnerHTML={{ __html: blog?.blogs }}
         />

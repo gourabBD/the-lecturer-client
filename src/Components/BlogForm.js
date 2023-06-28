@@ -70,10 +70,10 @@ const BlogForm = () => {
     imageActions: {},
     imageFormats: {},
     toolbar: [
-      [{ header: "1" }, { header: "2" }, { font: [] }],
-      [{ size: [] }],
+      [{ header: "1" }, { header: "2" }],
+     
       [{ color: [] }, { background: [] }],
-      [{ align: [] }],
+     
       ["bold", "italic", "underline", "strike", "blockquote"],
       [
         { list: "ordered" },
@@ -91,11 +91,10 @@ const BlogForm = () => {
   };
   const formats = [
     "header",
-    "font",
-    "size",
+    
     "bold",
     "italic",
-    "align",
+    
     "float",
     "underline",
     "strike",
@@ -128,10 +127,12 @@ const BlogForm = () => {
             formats={formats}
           />
         </div>
+<div className="flex justify-center">
 
         <button className="btn btn-outline btn-primary mt-10" onSubmit={getValue}>
           Post blog
         </button>
+</div>
       </form>
     </div>
   );
