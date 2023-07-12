@@ -59,21 +59,21 @@ const Login = () => {
       }
 
     return (
-        <div className='h-[800px] flex justify-center items-center'>
+        <div className='h-[800px] text-teal-400 flex justify-center items-center'>
             <div className='w-96 p-7'>
                 <h2 className='text-xl text-center'>Login</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Email</span></label>
+                        <label className="label "> <span className="label-text text-teal-400">Email</span></label>
                         <input type="text"
                             {...register("email", {
                                 required: "Email Address is required"
                             })}
                             className="input input-bordered w-full max-w-xs" />
-                        {errors.email && <p className='text-red-600'>{errors.email?.message}</p>}
+                        {errors.email && <p className='text-red-400 font-semibold'>{errors.email?.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Password</span></label>
+                        <label className="label"> <span className="label-text text-teal-400">Password</span></label>
                         <input type="password"
                             {...register("password", {
                                 required: "Password is required",
@@ -81,17 +81,17 @@ const Login = () => {
                             })}
                             className="input input-bordered w-full max-w-xs " />
                        
-                        {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
+                        {errors.password && <p className='text-red-400 font-semibold'>{errors.password?.message}</p>}
                     </div>
                     
-                    <input className='btn btn-primary w-full mt-2' value="Login" type="submit" />
+                    <input className='btn btn-primary btn-outline shadow-lg shadow-blue-800 w-full mt-2 mb-2' value="Login" type="submit" />
                    <div>
-                       {loginError && <p className='text-red-600'>{loginError}</p>}
+                       {loginError && <p className='text-red-400 font-semibolddsda'>{loginError}</p>}
                     </div>
                 </form>
                 <p>New to The Lecturer? <Link className='text-blue-600 underline' to="/register">Create new Account.</Link></p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleSignIn} className='btn btn-outline btn-info w-full gap-2'><FaGoogle></FaGoogle>Login WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline btn-info shadow-lg shadow-green-700 w-full gap-2'><FaGoogle></FaGoogle>Login WITH GOOGLE</button>
             </div>
         </div>
     );

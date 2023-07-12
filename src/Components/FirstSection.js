@@ -22,10 +22,10 @@ const FirstSection = () => {
           >
             Tests
           </Link>
-          </div> :<div>
+          </div> :<div className=''>
           <TypeAnimation
           sequence={["Login first to attend quizes!! ", 3000,"",2000,]}
-          className="text-lg text-center font-medium  mt-10  text-black"
+          className="text-lg text-center font-medium text-teal-400 mt-10  text-black"
           wrapper="span"
           cursor={false}
           repeat={Infinity}

@@ -96,7 +96,7 @@ const Signup = () => {
           <div className="form-control w-full max-w-xs">
             <label className="label">
               {" "}
-              <span className="label-text">Name</span>
+              <span className="label-text text-teal-400">Name</span>
             </label>
             <input
               type="text"
@@ -106,13 +106,13 @@ const Signup = () => {
               className="input input-bordered w-full max-w-xs"
             />
             {errors.name && (
-              <p className="text-red-500">{errors.name.message}</p>
+              <p className="text-red-400 font-semibold">{errors.name.message}</p>
             )}
           </div>
           <div className="form-control w-full max-w-xs">
             <label className="label">
               {" "}
-              <span className="label-text">Email</span>
+              <span className="label-text text-teal-400">Email</span>
             </label>
             <input
               type="email"
@@ -122,13 +122,13 @@ const Signup = () => {
               className="input input-bordered w-full max-w-xs"
             />
             {errors.email && (
-              <p className="text-red-500">{errors.email.message}</p>
+              <p className="text-red-400 font-semibold">{errors.email.message}</p>
             )}
           </div>
           <div className="form-control w-full max-w-xs">
             <label className="label">
               {" "}
-              <span className="label-text">Password</span>
+              <span className="label-text text-teal-400">Password</span>
             </label>
             <input
               type="password"
@@ -147,17 +147,17 @@ const Signup = () => {
               className="input input-bordered w-full max-w-xs"
             />
             {errors.password && (
-              <p className="text-red-500">{errors.password.message}</p>
+              <p className="text-red-400 font-semibold">{errors.password.message}</p>
             )}
           </div>
           {/* select options */}
 
           <input
-            className="btn btn-primary w-full mt-4"
+            className="btn btn-primary btn-outline shadow-lg shadow-blue-800 mb-2 w-full mt-4"
             value="Sign Up"
             type="submit"
           />
-          {signUpError && <p className="text-red-600">{signUpError}</p>}
+          {signUpError && <p className="text-red-400 font-semibold font-semibold">{signUpError}</p>}
         </form>
         <p>
           Already have an account?{" "}
@@ -168,7 +168,7 @@ const Signup = () => {
         <div className="divider">OR</div>
         <button
           onClick={handleGoogleSignIn}
-          className="btn btn-outline btn-info gap-2 w-full"
+          className="btn btn-outline shadow-lg shadow-green-800 btn-info gap-2 w-full"
         >
         <FaGoogle></FaGoogle>
           Sign Up with GOOGLE
