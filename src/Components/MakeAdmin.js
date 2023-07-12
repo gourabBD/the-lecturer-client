@@ -72,13 +72,13 @@ const MakeAdmin = () => {
                 onClick={() => {
                   handleMakeAdmin(users);
                 }}
-                className="btn btn-sm btn-outline mr-2 btn-primary"
+                className="btn btn-sm btn-outline shadow-2xl shadow-blue-800 mr-2 btn-primary"
               >
                 Make admin
               </button>
               <button
                 onClick={() => handleDeleteUser(users)}
-                className="btn btn-outline btn-sm btn-error "
+                className="btn btn-outline  shadow-2xl shadow-red-800 btn-sm btn-error "
               >
             
                 Remove User

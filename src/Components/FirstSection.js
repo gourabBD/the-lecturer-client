@@ -12,13 +12,13 @@ const FirstSection = () => {
           {user?.uid ?<div className='grid gap-5 mb-5'>
             <Link
             to={"/"}
-            className="border w-full font-medium btn btn-ghost normal-case text-sm shadow-teal-500 shadow-2xl flex text-left"
+            className="border w-full font-medium btn btn-ghost normal-case text-sm shadow-teal-500 shadow-xl flex text-left"
           >
             Home
           </Link>
           <Link
             to={"/tests"}
-            className="font-medium btn btn-ghost normal-case text-sm w-full shadow-teal-500 shadow-2xl flex text-left"
+            className="font-medium btn btn-ghost normal-case text-sm w-full shadow-teal-500 shadow-xl flex text-left"
           >
             Tests
           </Link>
@@ -40,17 +40,17 @@ const FirstSection = () => {
               <Link
                
                 to={"/createblog"}
-                className="font-medium btn btn-ghost normal-case text-sm w-full shadow-teal-500 shadow-2xl flex text-left"
+                className="font-medium btn btn-ghost normal-case text-sm w-full shadow-teal-500 shadow-xl flex text-left"
               >
                 Create a blog
               </Link>
               <Link
               to={"/createTests"}
-              className="font-medium btn btn-ghost normal-case  w-full shadow-2xl shadow-teal-500 flex text-left text-sm"
+              className="font-medium btn btn-ghost normal-case  w-full shadow-xl shadow-teal-500 flex text-left text-sm"
             >
               Create tests
             </Link>
-            <Link className='font-medium btn btn-ghost normal-case text-sm w-full shadow-teal-500 shadow-2xl flex text-left' to={"/makeAdmin2431"}>All users</Link>
+            <Link className='font-medium btn btn-ghost normal-case text-sm w-full shadow-teal-500 shadow-xl flex text-left' to={"/makeAdmin2431"}>All users</Link>
               </div>
             ) : (
               <div key={Math.random()}></div>
