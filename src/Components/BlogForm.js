@@ -72,7 +72,7 @@ const BlogForm = () => {
     toolbar: [
       [{ header: "1" }, { header: "2" }],
      
-      [{ color: [] }, { background: [] }],
+      [{ color: []}, { background: [] }],
      
       ["bold", "italic", "underline", "strike", "blockquote"],
       [
@@ -118,8 +118,8 @@ const BlogForm = () => {
       <form onSubmit={getValue} action="">
         <div className="lg:mb-16">
           <ReactQuill
+            className="placeholder-teal-400 overflow-y-visible  lg:h-96 "
             placeholder="Write something..."
-            className="  overflow-y-visible  lg:h-96 "
             theme="snow"
             value={value}
             onChange={setValue}

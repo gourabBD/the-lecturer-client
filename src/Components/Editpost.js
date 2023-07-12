@@ -31,18 +31,18 @@ const Editpost = ({ blog }) => {
     }
   };
   return (
-    <div className=" border-4 border-blue-100 mt-10 shadow-xl">
-      <div className="p-5">
+    <div className="  mt-10  shadow-lg shadow-teal-500 border border-teal-500">
+      <div className="p-2">
         <div
         
-          className="card mt-10 text-left   bg-base-100 "
+          className="p-5 mt-10 text-left   "
           key={blog?._id}
           dangerouslySetInnerHTML={{ __html: blog?.blogs }}
         />
         <div className="lg:flex md:flex grid justify-between items-center ">
-        <p  className="text-primary mt-10 text-left">
+        <p  className="text-accent mt-10 text-left">
                 Author:{" "}
-                <span className="font-semibold badge badge-success badge-outline">
+                <span className="font-semibold badge badge-accent shadow-lg shadow-yellow-500 badge-outline">
                   {blog?.author}
                 </span>{" "}
               </p>
@@ -67,7 +67,7 @@ const Editpost = ({ blog }) => {
             className="flex justify-end gap-2 pr-5 items-center"
           >
             <Link
-              className="btn btn-sm btn-outline btn-primary mt-5 mb-5"
+              className="btn btn-sm btn-outline shadow-lg shadow-blue-800 btn-primary mt-5 mb-5"
               to={`/allBlogs/${blog?._id}`}
             >
               <button>Edit Blog</button>
@@ -77,7 +77,7 @@ const Editpost = ({ blog }) => {
               onClick={() => {
                 handleDeleteBlog(blog?._id);
               }}
-              className="btn btn-sm btn-outline btn-error mt-5 mb-5"
+              className="btn btn-sm btn-outline  shadow-lg shadow-red-800  btn-error mt-5 mb-5"
             >
               Delete Blog
             </button>

@@ -92,7 +92,7 @@ const CreateTests = () => {
     <div className="min-h-screen mt-10 p-2">
       <div className="flex justify-center mb-5">
         <div>
-          <p className="text-md font-semibold mb-2 text-blue-700">
+          <p className="text-md font-semibold mb-2 text-teal-400">
             Enter the topic name once
           </p>
           <input
@@ -100,7 +100,7 @@ const CreateTests = () => {
             onChange={handleChange}
             type="text"
             name="topic"
-            className="input input-bordered w-full max-w-xs disabled"
+            className="input shadow-2xl shadow-teal-500 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 w-full max-w-xs disabled"
             placeholder="Topic name "
             required
           />
@@ -127,16 +127,16 @@ const CreateTests = () => {
               {...register("question", {
                 required: "Question field is required",
               })}
-              className="input input-bordered w-full max-w-lg"
+              className="input shadow-2xl shadow-teal-500 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900  w-full max-w-lg"
               placeholder="Write your question here..."
             />
             {errors.question && (
-              <p className="text-red-600">{errors.question?.message}</p>
+              <p className="text-red-400 font-semibold">{errors.question?.message}</p>
             )}
           </div>
         </div>
 
-        <p className="text-blue-700 underline mt-5 text-lg font-semibold">
+        <p className="text-teal-400 underline mt-5 text-lg font-semibold">
           Put your options bellow
         </p>
         <div className="flex justify-center mt-10">
@@ -147,11 +147,11 @@ const CreateTests = () => {
                 {...register("optionA", {
                   required: "Option A is required",
                 })}
-                className="input input-bordered input-accent w-full max-w-xs"
+                className="input shadow-2xl shadow-teal-500 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 w-full max-w-xs"
                 placeholder="Option A"
               />
               {errors.optionA && (
-                <p className="text-red-600">{errors.optionA?.message}</p>
+                <p className="text-red-400 font-semibold">{errors.optionA?.message}</p>
               )}
             </div>
             <div className="form-control w-full max-w-xs">
@@ -160,11 +160,11 @@ const CreateTests = () => {
                 {...register("optionB", {
                   required: "Option B is required",
                 })}
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input shadow-2xl shadow-teal-500 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 w-full max-w-xs"
                 placeholder="Option B"
               />
               {errors.optionB && (
-                <p className="text-red-600">{errors.optionB?.message}</p>
+                <p className="text-red-400 font-semibold">{errors.optionB?.message}</p>
               )}
             </div>
 
@@ -174,11 +174,11 @@ const CreateTests = () => {
                 {...register("optionC", {
                   required: "Option C is required",
                 })}
-                className="input input-bordered input-success w-full max-w-xs"
+                className="input shadow-2xl shadow-teal-500 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 w-full max-w-xs"
                 placeholder="Option C"
               />
               {errors.optionC && (
-                <p className="text-red-600">{errors.optionC?.message}</p>
+                <p className="text-red-400 font-semibold">{errors.optionC?.message}</p>
               )}
             </div>
 
@@ -188,11 +188,11 @@ const CreateTests = () => {
                 {...register("optionD", {
                   required: "Option D is required",
                 })}
-                className="input input-bordered input-info w-full max-w-xs"
+                className="input shadow-2xl shadow-teal-500 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 w-full max-w-xs"
                 placeholder="Option D"
               />
               {errors.optionD && (
-                <p className="text-red-600">{errors.optionD?.message}</p>
+                <p className="text-red-400 font-semibold font-semibold">{errors.optionD?.message}</p>
               )}
             </div>
 
@@ -200,7 +200,7 @@ const CreateTests = () => {
               {...register("correctAns", {
                 required: "Correct Answer is required",
               })}
-              className="border border-primary max-w-lg mb-10"
+              className="border border-teal-500 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 shadow-2xl shadow-teal-500 max-w-lg mb-10"
               required
             >
               <option className="disabled" value={""}>
@@ -215,7 +215,7 @@ const CreateTests = () => {
         </div>
         <div>
           <input
-            className="btn btn-primary w-auto  mt-2"
+            className="btn btn-accent w-auto  mt-2"
             value="Add to queue"
             type="submit"
           />
@@ -224,7 +224,7 @@ const CreateTests = () => {
       <div>
         <button
           onClick={handleQuestionSubmit}
-          className="btn btn-info btn-outline mt-10"
+          className="btn  hover:bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 shadow-2xl shadow-teal-500 mt-10"
         >
           Publish
         </button>

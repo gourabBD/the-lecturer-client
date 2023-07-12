@@ -14,7 +14,7 @@ const Tests = () => {
 
   return (
     <div className="min-h-screen">
-      <p className="text-xl font-semibold underline text-primary mb-10 mt-10">
+      <p className="text-xl font-semibold underline text-teal-400 mb-10 mt-10 underline-offset-4 ">
         Quiz Topics:
       </p>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">

@@ -9,12 +9,29 @@ h1 {
    
   }
   iframe{
+    width: 100%;
     height: 400px;
     padding: 10px;
   }
 
 
+  .ql-toolbar .ql-stroke {
+    fill: none;
+    stroke: #fff;
+}
 
+.ql-toolbar .ql-fill {
+    fill: #fff;
+    stroke: none;
+}
+
+.ql-toolbar .ql-picker {
+    color: #fff;
+}
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  
+  color: white;
+}
 
   
   

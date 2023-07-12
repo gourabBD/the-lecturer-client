@@ -44,7 +44,7 @@ const AllQuizes = () => {
             <div
               key={allTestQuestions.indexOf(singleQuest)}
               id={allTestQuestions.indexOf(singleQuest)}
-              className=" cursor-pointer overflow-x-scroll scrollbar-hide mt-16  shadow-2xl mb-16 border p-5"
+              className=" cursor-pointer overflow-x-scroll scrollbar-hide mt-16   mb-16  p-5 shadow-lg shadow-teal-400"
             >
               <div className="lg:flex md:flex sm:grid flex-wrap text-left">
                 <span className="text-lg font-semibold text-success ">Q:</span>
@@ -54,7 +54,7 @@ const AllQuizes = () => {
                 </p>
               </div>
               <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-5">
-                <div className="lg:flex md:flex sm:grid justify-start items-center mt-5 border border-primary shadow-2xl p-5 overflow-x-scroll scrollbar-hide">
+                <div className="lg:flex md:flex sm:grid justify-start items-center mt-5  shadow-teal-500 shadow-2xl p-5 overflow-x-scroll scrollbar-hide">
                   <input
                     disabled={
                       questIndex === allTestQuestions.indexOf(singleQuest) &&
@@ -77,14 +77,14 @@ const AllQuizes = () => {
                     type="checkbox"
                     name="optionA"
                     value={"optionA"}
-                    className="radio checked:bg-blue-500   flex justify-start"
+                    className="radio checked:bg-blue-500   flex justify-start bg-blue-400"
                   />
                   <span className="ml-2 flex text-start text-base font-medium">
                     {singleQuest?.optionA}
                   </span>
                 </div>
 
-                <div className="lg:flex md:flex sm:grid justify-start items-center mt-5 border border-primary shadow-2xl p-5 overflow-x-scroll scrollbar-hide">
+                <div className="lg:flex md:flex sm:grid justify-start items-center mt-5 shadow-teal-500 shadow-2xl p-5 overflow-x-scroll scrollbar-hide">
                   <input
                     disabled={
                       questIndex === allTestQuestions.indexOf(singleQuest) &&
@@ -107,13 +107,13 @@ const AllQuizes = () => {
                     type="checkbox"
                     name="optionB"
                     value={"optionB"}
-                    className="radio checked:bg-blue-500 flex justify-start"
+                    className="radio checked:bg-blue-600 flex justify-start bg-blue-400"
                   />
                   <span className="ml-2 flex text-start text-base font-medium">
                     {singleQuest?.optionB}
                   </span>
                 </div>
-                <div className=" justify-start items-center mt-5 border border-primary shadow-2xl p-5 lg:flex md:flex sm:grid overflow-x-scroll scrollbar-hide">
+                <div className=" justify-start items-center mt-5 shadow-teal-500 shadow-2xl p-5 lg:flex md:flex sm:grid overflow-x-scroll scrollbar-hide">
                   <input
                     disabled={
                       questIndex === allTestQuestions.indexOf(singleQuest) &&
@@ -136,13 +136,13 @@ const AllQuizes = () => {
                     type="checkbox"
                     name="optionC"
                     value={"optionC"}
-                    className="radio checked:bg-blue-500 flex justify-start"
+                    className="radio checked:bg-blue-500 flex justify-start bg-blue-400"
                   />
                   <span className="ml-2 flex text-start text-base font-medium">
                     {singleQuest?.optionC}
                   </span>
                 </div>
-                <div className="lg:flex md:flex sm:grid justify-start items-center mt-5 border border-primary overflow-x-scroll scrollbar-hide shadow-2xl p-5">
+                <div className="lg:flex md:flex sm:grid justify-start items-center mt-5 shadow-teal-500 overflow-x-scroll scrollbar-hide shadow-2xl p-5">
                   <input
                     disabled={
                       questIndex === allTestQuestions.indexOf(singleQuest) &&
@@ -165,7 +165,7 @@ const AllQuizes = () => {
                     type="checkbox"
                     name="optionD"
                     value={"optionD"}
-                    className="radio checked:bg-blue-500 flex justify-start"
+                    className="radio checked:bg-blue-500 flex justify-start bg-blue-400"
                   />
                   <span className="ml-2 flex text-start text-base  font-medium">
                     {singleQuest?.optionD}

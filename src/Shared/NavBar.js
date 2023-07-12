@@ -13,7 +13,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar  flex justify-between bg-base-100  lg:pr-5 lg:pl-5 bg-blue-500">
+    <div className="navbar  flex justify-between   lg:pr-5 lg:pl-5 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 shadow-lg shadow-teal-500">
       <div className="flex gap-2">
       <Link to={"/"}>
 
@@ -42,10 +42,10 @@ const NavBar = () => {
             <Link className="btn btn-ghost normal-case text-xl lg:flex md:hidden hidden" to={"/tests"}>Tests</Link>
             </div>
 
-              <p className=" font-semibold text-black text-sm  border border-primary  rounded p-2">
+              <p className=" font-semibold  text-sm  border border-teal-500 shadow-2xl shadow-teal-500  rounded p-2">
                 {user?.displayName}
               </p>
-              <button className="btn btn-error gap-2" onClick={handleLogOut}>
+              <button className="btn btn-error btn-outline shadow-2xl shadow-red-800 gap-2" onClick={handleLogOut}>
               <FiLogOut></FiLogOut>
                 Sign out
               </button>
@@ -79,7 +79,7 @@ const NavBar = () => {
           </label>
           <div
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 gap-2"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow-2xl shadow-teal-500 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900  rounded-box w-52 gap-2"
           >
             <Link
               to={"/"}
@@ -120,10 +120,10 @@ const NavBar = () => {
             {user?.uid ? (
               <div className="block  p-1">
                 {/* <Link to={"/createblog"} className="font-medium btn btn-ghost normal-case text-md">Create a blog</Link> */}
-                <p className=" font-semibold text-sm mb-2 border border-primary  rounded p-2 mr-2 text-black ">
+                <p className=" font-semibold text-sm mb-2 border border-teal-500 shadow-2xl shadow-teal-500   rounded p-2 mr-2  ">
                   {user?.displayName}
                 </p>
-                <button className="btn btn-error gap-2" onClick={handleLogOut}>
+                <button className="btn btn-error gap-2 btn-outline shadow-2xl shadow-red-800" onClick={handleLogOut}>
                 <FiLogOut></FiLogOut>
                   Sign out
                 </button>

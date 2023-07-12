@@ -48,12 +48,12 @@ const MakeAdmin = () => {
   };
 
   return (
-    <div className="min-h-screen p-10 grid ">
+    <div className="min-h-screen shadow-2xl shadow-teal-500 p-10 grid ">
       <div></div>
 
       {allUsers?.map((users) => (
         <div
-          className="  w-full mt-5 p-10 shadow-2xl font-semibold justify-evenly items-center grid lg:grid-cols-3 grid-cols-1    gap-5 overflow-x-auto scrollbar-hide"
+          className="  w-full mt-5 p-10 shadow-2xl shadow-teal-500 font-semibold justify-evenly items-center grid lg:grid-cols-3 grid-cols-1    gap-5 overflow-x-auto scrollbar-hide"
           key={users?._id}
         >
           <div className="">

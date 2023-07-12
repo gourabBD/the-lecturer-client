@@ -12,7 +12,7 @@ const Home = () => {
   //testing
   return (
     <div className="lg:p-10   lg:flex     md:grid sm:grid grid gap-2 h-fit">
-    <div  className=" lg:w-1/3 mt-10 relative  shadow-2xl  p-5 bg-blue-500 ">
+    <div  className=" lg:w-1/3 mt-10 relative  shadow-2xl  p-5 bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 ">
     <div className="sticky  top-0">
 
   <FirstSection></FirstSection>

@@ -109,7 +109,7 @@ const EditingForm = ({ prevblog, blogId }) => {
     "video",
   ];
   return (
-    <div className="lg:p-10 md:p-10 sm:p-2 min-h-screen">
+    <div className="lg:p-10 md:p-10 sm:p-2 min-h-screen ">
       <h1 className="text-left  mb-5 text-lg font-semibold">
         Edit your blog:{" "}
       </h1>
@@ -119,7 +119,7 @@ const EditingForm = ({ prevblog, blogId }) => {
           <ReactQuill
           
             placeholder="Write something..."
-            className="  overflow-y-visible  lg:h-96 "
+            className=" overflow-y-visible  lg:h-96 "
             theme="snow"
             onChange={setValue}
             modules={modules}
