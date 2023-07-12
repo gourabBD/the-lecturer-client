@@ -9,7 +9,7 @@ const FirstSection = () => {
         
         <div  className=' grid  bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900'>
              
-          {user?.uid ?<div className='grid gap-10 mb-5'>
+          {user?.uid ?<div className='grid gap-5 mb-5'>
             <Link
             to={"/"}
             className="border w-full font-medium btn btn-ghost normal-case text-sm shadow-teal-500 shadow-2xl flex text-left"
