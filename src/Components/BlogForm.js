@@ -129,7 +129,7 @@ const BlogForm = () => {
         </div>
 <div className="flex justify-center">
 
-        <button className="btn btn-outline btn-primary mt-10" onSubmit={getValue}>
+        <button className="btn btn-outline shadow-lg shadow-blue-800 btn-primary mt-10" onSubmit={getValue}>
           Post blog
         </button>
 </div>

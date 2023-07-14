@@ -129,7 +129,7 @@ const EditingForm = ({ prevblog, blogId }) => {
         </div>
         <div className="flex justify-center">
 
-        <button className="btn btn-primary  mt-16" onSubmit={handleEditedBlog}>
+        <button className="btn btn-primary btn-outline shadow-lg shadow-blue-800  mt-16" onSubmit={handleEditedBlog}>
           Post
         </button>
         </div>
