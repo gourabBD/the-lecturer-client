@@ -37,7 +37,7 @@
 
 
 # Create a blog form as an admin
-![create-blog-admin](https://github.com/gourabBD/the-lecturer-client/assets/67328861/7ff349d3-aa6b-4a0a-a396-1881e023921d)
+![screencapture-the-lecturer-3d2e4-web-app-createblog-2023-07-14-15_08_26](https://github.com/gourabBD/the-lecturer-client/assets/67328861/6af495d3-4419-44d9-8975-7d1886cdc896)
 
 
 
