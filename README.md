@@ -43,8 +43,7 @@
 
 
 # Quiz creation page as an admin
-
-![create test-admin](https://github.com/gourabBD/the-lecturer-client/assets/67328861/1a0a03d1-5a65-46fd-8e3b-d885c45ddce8)
+![screencapture-the-lecturer-3d2e4-web-app-createTests-2023-07-14-15_17_14](https://github.com/gourabBD/the-lecturer-client/assets/67328861/bb8db44e-8702-4134-ae15-ada98a9e53e5)
 
 
 
