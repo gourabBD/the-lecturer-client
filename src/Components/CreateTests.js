@@ -215,7 +215,7 @@ const CreateTests = () => {
         </div>
         <div>
           <input
-            className="btn btn-accent w-auto  mt-2"
+            className="btn btn-accent btn-outline shadow-xl shadow-yellow-500 w-auto  mt-2"
             value="Add to queue"
             type="submit"
           />
@@ -224,7 +224,7 @@ const CreateTests = () => {
       <div>
         <button
           onClick={handleQuestionSubmit}
-          className="btn  hover:bg-gradient-to-r from-slate-900 via-teal-900 to-slate-900 shadow-2xl shadow-teal-500 mt-10"
+          className="btn btn-info btn-outline shadow-xl shadow-green-500 mt-10"
         >
           Publish
         </button>
